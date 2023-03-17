@@ -7,6 +7,9 @@ expo-cli 설치
 
 콘솔에 npm start 입력 (qr코드 뜨면성공)
   npm start 안될시 nodejs 설치안되있거나, vscode 관리자권한으로 실행
+  그래도 안되면 cd로 디렉토리 이동
+
+
 다른터미널에 expo login 입력 
 폰 expo앱으로 qr코드 스캔
 
