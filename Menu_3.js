@@ -20,7 +20,10 @@ function Menu_3() {
           2023년 3월
         </Text>
         <ScrollView 
-        horizontal={true}>
+          horizontal={true}
+          showsVerticalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false}
+        >
         <View style={styles.container}>
           {buttons.map((count, index) => (
             <TouchableOpacity 
@@ -66,24 +69,24 @@ const styles = StyleSheet.create({
     
   },
   button: {
-    width: 80,
-    height: 80,
+    width: 50,
+    height: 50,
     borderRadius: 50,
     margin: 5,
-    backgroundColor: 'white',
+    backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
   },
   selectedButton: {
-    backgroundColor: 'yellow',
+    backgroundColor: 'blue',
   },
   buttonText: {
-    color: 'black',
-    fontSize: 35,
+    color: 'white',
+    fontSize: 15,
   },
   dayText: {
-    color: 'black',
-    fontSize: 18,
+    color: 'white',
+    fontSize: 10,
   },
 });
 
