@@ -1,12 +1,90 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, View, Text, ScrollView, SafeAreaView, TouchableOpacity } from 'react-native';
 
 function Menu_3() {
+  const startCount = 1; // 시작 값
+  const totalCount = 30; // 전체 버튼 개수
+  const days = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
+;
+  const buttons = Array(totalCount).fill(startCount);
+  
+  const [selectedButtonIndex, setSelectedButtonIndex] = useState(-1);
+
+  const handleButtonPress = (index) => {
+    setSelectedButtonIndex(index);
+  }
+
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>3번 메뉴</Text>
-    </View>
+    <View>
+        <Text style={styles.toptext}>
+          2023년 3월
+        </Text>
+        <ScrollView 
+        horizontal={true}>
+        <View style={styles.container}>
+          {buttons.map((count, index) => (
+            <TouchableOpacity 
+              key={index} 
+              style={[
+                styles.button,
+                selectedButtonIndex === index ? styles.selectedButton : null
+              ]}
+              onPress={() => handleButtonPress(index)}
+            >
+              <Text style={styles.buttonText}>{count + index}</Text>
+              <Text style={styles.dayText}>{days[index % 7]}</Text>
+            </TouchableOpacity>
+          ))}
+        </View>
+      </ScrollView>
+      <Text style={styles.addtext}>
+        + TODO 추가하기
+      </Text>
+      <Text style={styles.todo}>
+        TO-DO example
+      </Text>     
+    </View> 
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    backgroundColor:'gray'
+  },
+  toptext:{
+    fontSize:30
+  },
+  addtext:{
+    fontSize:25
+  },
+  todo:{
+    color: 'white',    
+    fontSize:40,
+    backgroundColor:'gray',
+    height:100,
+    
+  },
+  button: {
+    width: 80,
+    height: 80,
+    borderRadius: 50,
+    margin: 5,
+    backgroundColor: 'white',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  selectedButton: {
+    backgroundColor: 'yellow',
+  },
+  buttonText: {
+    color: 'black',
+    fontSize: 35,
+  },
+  dayText: {
+    color: 'black',
+    fontSize: 18,
+  },
+});
 
 export default Menu_3;
