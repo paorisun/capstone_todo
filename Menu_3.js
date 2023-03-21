@@ -56,10 +56,14 @@ const styles = StyleSheet.create({
     backgroundColor:'gray'
   },
   toptext:{
-    fontSize:30
+    fontSize:30,
+    color:"white",
+    backgroundColor:"black"
   },
   addtext:{
-    fontSize:25
+    fontSize:25,
+    color:"white",
+    backgroundColor:"black"
   },
   todo:{
     color: 'white',    
