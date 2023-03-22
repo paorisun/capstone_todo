@@ -11,7 +11,13 @@ const Tab = createBottomTabNavigator();
 
 export default function MenuBar() {
   return (
-    <Tab.Navigator initialRouteName="3" tabBarOptions={{ showLabel: false }}>
+    <Tab.Navigator
+      initialRouteName="3"
+      screenOptions={{
+        tabBarStyle: { backgroundColor:"black",height:60, flex:0.08 },
+        tabBarShowLabel: false,
+      }}
+    >
       <Tab.Screen
         name="1"
         component={Menu_1}
@@ -40,7 +46,7 @@ export default function MenuBar() {
                   ? require("./icon/home_icon_sel.jpg")
                   : require("./icon/home_icon.jpg")
               }
-              style={{ width: 25, height: 25 }}
+              style={{ width: 30, height: 23 }}
             />
           ),
         }}
