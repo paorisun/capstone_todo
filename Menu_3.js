@@ -9,12 +9,14 @@ import {
   Button,
 } from "react-native";
 import CustomModal from './Modal';
-
+import { Dimensions } from 'react-native';
+const { width, height } = Dimensions.get('window');
 function Menu_3() {
   const startCount = 1; // 시작 값
   const totalCount = 30; // 전체 버튼 개수
   const days = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
   const buttons = Array(totalCount).fill(startCount);
+
 
   const [selectedButtonIndex, setSelectedButtonIndex] = useState(-1);
   const [selectedCount, setSelectedCount] = useState(0); 
@@ -118,10 +120,8 @@ const styles = StyleSheet.create({
   },
 
   addButtonContainer: {
-    marginTop: 570,
-    marginLeft: 350,
-    bottom: 20,
-    right: 20,
+    marginTop: height/1.52,
+    marginLeft: width/1.26,
   },
   addButton: {
     width: 60,
