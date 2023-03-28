@@ -22,10 +22,6 @@ function Menu_3() {
     setSelectedCount(0);
   };
 
-  const handleAddStar = () => {
-    setSelectedCount(selectedCount + 1);
-  };
-
   const currentMonth = new Date().getMonth() + 1;
   const currentYear = new Date().getFullYear();
 
@@ -55,21 +51,8 @@ function Menu_3() {
           ))}
         </View>
       </ScrollView>
-      <Text style={styles.addtext}>+ TODO 추가하기</Text>
-      <Text style={styles.todo}>
-        {selectedButtonIndex !== -1
-          ? `${currentYear}.${currentMonth}.${selectedButtonIndex + 1}`
-          : "TO-DO example"}
-      </Text>
-      <View style={styles.emContainer}>
-          <Text style={styles.addtext}>
-            {Array.from({ length: selectedCount }).map((_, index) => (
-              <Text key={index}>👍</Text>
-            ))}
-          </Text>
-      </View>
       <View style={styles.addButtonContainer}>
-        <TouchableOpacity style={styles.addButton} onPress={handleAddStar}>
+        <TouchableOpacity style={styles.addButton}>
           <Text style={styles.addButtonText}>+</Text>
         </TouchableOpacity>
       </View>
@@ -88,8 +71,8 @@ const styles = StyleSheet.create({
   },
   toptext: {
     fontSize: 30,
-    color: "white",
-    backgroundColor: "black",
+    color: "black",
+    backgroundColor: "#FFFCFC" ,
   },
   addtext: {
     fontSize: 25,
@@ -106,24 +89,29 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: 50,
-    margin: 5,
-    backgroundColor: "black",
+    marginVertical:5,
+    marginHorizontal: 8,
+    backgroundColor: "#E8E8E8",
     alignItems: "center",
     justifyContent: "center",
   },
   selectedButton: { // 선택된 상단 버튼
-    backgroundColor: "blue",
+    backgroundColor: "#37C7C7",
   },
   buttonText: {
-    color: "white",
-    fontSize: 15,
+    color: "#313131",
+    fontSize: 25,
+    fontWeight: "bold",
   },
   dayText: {
-    color: "white",
+    color: "#313131",
     fontSize: 10,
+    fontWeight: "bold",
   },
+
   addButtonContainer: {
-    position: 'absolute',
+    marginTop: 570,
+    marginLeft: 350,
     bottom: 20,
     right: 20,
   },
@@ -131,7 +119,7 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
     borderRadius: 30,
-    backgroundColor: 'blue',
+    backgroundColor: '#37C7C7',
     alignItems: 'center',
     justifyContent: 'center',
   },
