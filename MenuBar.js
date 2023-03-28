@@ -18,39 +18,9 @@ export default function MenuBar() {
         tabBarShowLabel: false,
       }}
     >
-      <Tab.Screen
-        name="1"
-        component={Menu_1}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <Image
-              source={
-                focused
-                  ? require("./icon/home_icon_sel.jpg")
-                  : require("./icon/home_icon.jpg")
-              }
-              style={{ width: 20, height: 20 }}
-            />
-          ),
-        }}
-      />
+      <Tab.Screen name="1" component={Menu_1} />
       <Tab.Screen name="2" component={Menu_2} />
-      <Tab.Screen
-        name="3"
-        component={Menu_3}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <Image
-              source={
-                focused
-                  ? require("./icon/home_icon_sel.jpg")
-                  : require("./icon/home_icon.jpg")
-              }
-              style={{ width: 30, height: 23 }}
-            />
-          ),
-        }}
-      />
+      <Tab.Screen name="3" component={Menu_3} />
       <Tab.Screen name="4" component={Menu_4} />
       <Tab.Screen name="5" component={Menu_5} />
     </Tab.Navigator>

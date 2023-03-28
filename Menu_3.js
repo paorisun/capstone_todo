@@ -6,7 +6,9 @@ import {
   ScrollView,
   SafeAreaView,
   TouchableOpacity,
+  Button,
 } from "react-native";
+import CustomModal from './Modal';
 
 function Menu_3() {
   const startCount = 1; // 시작 값
@@ -16,6 +18,9 @@ function Menu_3() {
 
   const [selectedButtonIndex, setSelectedButtonIndex] = useState(-1);
   const [selectedCount, setSelectedCount] = useState(0); 
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const toggleModal = () => {setModalVisible(!modalVisible);};
 
   const handleButtonPress = (index) => {
     setSelectedButtonIndex(index);
@@ -52,9 +57,12 @@ function Menu_3() {
         </View>
       </ScrollView>
       <View style={styles.addButtonContainer}>
-        <TouchableOpacity style={styles.addButton}>
+        <TouchableOpacity style={styles.addButton} onPress={toggleModal}>
           <Text style={styles.addButtonText}>+</Text>
         </TouchableOpacity>
+      </View>
+      <View style={styles.mcontainer}>
+        <CustomModal modalVisible={modalVisible} toggleModal={toggleModal} />
       </View>
     </View>
   );
@@ -126,6 +134,11 @@ const styles = StyleSheet.create({
   addButtonText: {
     fontSize: 40,
     color: 'white',
+  },
+  mcontainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   
 });
