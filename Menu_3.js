@@ -15,14 +15,14 @@ function Menu_3() {
   const buttons = Array(totalCount).fill(startCount);
 
   const [selectedButtonIndex, setSelectedButtonIndex] = useState(-1);
-  const [selectedCount, setSelectedCount] = useState(0); // 추가
+  const [selectedCount, setSelectedCount] = useState(0); 
 
   const handleButtonPress = (index) => {
     setSelectedButtonIndex(index);
     setSelectedCount(0);
   };
 
-  const handleAddStar = () => { // 추가
+  const handleAddStar = () => {
     setSelectedCount(selectedCount + 1);
   };
 
