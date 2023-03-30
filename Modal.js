@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { View, Modal, Text, Button, StyleSheet, TextInput, Keyboard } from 'react-native';
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import { faClock,faBell,faMapLocation,faLocation,faTag,faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
+
 
 const CustomModal = ({ modalVisible, toggleModal }) => {
 
@@ -14,6 +17,12 @@ const CustomModal = ({ modalVisible, toggleModal }) => {
           />
           </View>
           <View style={styles.cotain1}>
+            <FontAwesomeIcon
+                icon={faClock}
+                size={25}
+                style={{ color:"#9A9A9A" }}
+                marginRight="50px"
+              />
             <Text style={styles.modaltext}>시간</Text>
             <TextInput 
               placeholder="00"
@@ -25,6 +34,12 @@ const CustomModal = ({ modalVisible, toggleModal }) => {
             />
           </View>
           <View style={styles.cotain1}>
+            <FontAwesomeIcon
+                  icon={faBell}
+                  size={25}
+                  style={{ color:"#9A9A9A" }}
+                  marginRight="50px"
+                />
             <Text style={styles.modaltext}>알람</Text>
             <TextInput 
               placeholder="00"
@@ -33,6 +48,12 @@ const CustomModal = ({ modalVisible, toggleModal }) => {
             <Text style={styles.modaltext}>분전</Text>
           </View>
           <View style={styles.cotain1}>
+            <FontAwesomeIcon
+                  icon={faClock}
+                  size={25}
+                  style={{ color:"#9A9A9A" }}
+                  marginRight="50px"
+                />
             <Text style={styles.modaltext}>장소</Text>
             <TextInput 
               placeholder="장소를 검색하세요"
@@ -40,6 +61,12 @@ const CustomModal = ({ modalVisible, toggleModal }) => {
             />
           </View>
           <View style={styles.cotain1}>
+            <FontAwesomeIcon
+                  icon={faTag}
+                  size={25}
+                  style={{ color:"#9A9A9A" }}
+                  marginRight="50px"
+                />
             <Text style={styles.modaltext}>태그</Text>
             <TextInput 
               placeholder="00"
@@ -47,6 +74,12 @@ const CustomModal = ({ modalVisible, toggleModal }) => {
             />
           </View>
           <View style={styles.cotain1}>
+            <FontAwesomeIcon
+                    icon={faExclamationCircle}
+                    size={25}
+                    style={{ color:"#9A9A9A" }}
+                    marginRight="50px"
+                  />
             <Text style={styles.modaltext}>중요</Text>
             <TextInput 
               placeholder="00"

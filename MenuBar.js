@@ -28,7 +28,7 @@ export default function MenuBar() {
             <FontAwesomeIcon
               icon={faCalendarDays}
               size={25}
-              style={{ color: focused ? "white" : "grey" }}
+              style={{ color: focused ? "#37C7C7" : "#9A9A9A" }}
             />
           ),
         }}
@@ -41,7 +41,7 @@ export default function MenuBar() {
             <FontAwesomeIcon
               icon={faClock}
               size={25}
-              style={{ color: focused ? "white" : "grey" }}
+              style={{ color: focused ? "#37C7C7" : "#9A9A9A" }}
             />
           ),
         }}
@@ -54,7 +54,7 @@ export default function MenuBar() {
             <FontAwesomeIcon
               icon={faHome}
               size={25}
-              style={{ color: focused ? "white" : "grey" }}
+              style={{ color: focused ? "#37C7C7" : "#9A9A9A" }}
             />
           ),
         }}
@@ -67,7 +67,7 @@ export default function MenuBar() {
             <FontAwesomeIcon
               icon={faPiggyBank}
               size={25}
-              style={{ color: focused ? "white" : "grey" }}
+              style={{ color: focused ? "#37C7C7" : "#9A9A9A" }}
             />
           ),
         }}
@@ -80,7 +80,7 @@ export default function MenuBar() {
             <FontAwesomeIcon
               icon={faUser}
               size={25}
-              style={{ color: focused ? "white" : "grey" }}
+              style={{ color: focused ? "#37C7C7" : "#9A9A9A"  }}
             />
           ),
         }}

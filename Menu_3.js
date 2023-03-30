@@ -10,6 +10,11 @@ import {
 } from "react-native";
 import CustomModal from "./Modal";
 import { Dimensions } from "react-native";
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import { faHome,faUser,faCalendarDays,faClock,faPiggyBank } from "@fortawesome/free-solid-svg-icons";
+
+
+
 const { width, height } = Dimensions.get("window");
 function Menu_3() {
   const startCount = 1; // 시작 값
