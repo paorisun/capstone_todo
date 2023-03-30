@@ -7,7 +7,7 @@ import Menu_4 from "./Menu_4";
 import Menu_5 from "./Menu_5";
 import { Image } from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faHome,faUser,faCalendarDays,faClock,faPiggyBank } from "@fortawesome/free-solid-svg-icons";
 
 const Tab = createBottomTabNavigator();
 
@@ -26,7 +26,7 @@ export default function MenuBar() {
         options={{
           tabBarIcon: ({ focused }) => (
             <FontAwesomeIcon
-              icon={faHome}
+              icon={faCalendarDays}
               size={25}
               style={{ color: focused ? "white" : "grey" }}
             />
@@ -39,7 +39,7 @@ export default function MenuBar() {
         options={{
           tabBarIcon: ({ focused }) => (
             <FontAwesomeIcon
-              icon={faHome}
+              icon={faClock}
               size={25}
               style={{ color: focused ? "white" : "grey" }}
             />
@@ -65,7 +65,7 @@ export default function MenuBar() {
         options={{
           tabBarIcon: ({ focused }) => (
             <FontAwesomeIcon
-              icon={faHome}
+              icon={faPiggyBank}
               size={25}
               style={{ color: focused ? "white" : "grey" }}
             />
@@ -78,7 +78,7 @@ export default function MenuBar() {
         options={{
           tabBarIcon: ({ focused }) => (
             <FontAwesomeIcon
-              icon={faHome}
+              icon={faUser}
               size={25}
               style={{ color: focused ? "white" : "grey" }}
             />
