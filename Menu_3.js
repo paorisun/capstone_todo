@@ -8,21 +8,22 @@ import {
   TouchableOpacity,
   Button,
 } from "react-native";
-import CustomModal from './Modal';
-import { Dimensions } from 'react-native';
-const { width, height } = Dimensions.get('window');
+import CustomModal from "./Modal";
+import { Dimensions } from "react-native";
+const { width, height } = Dimensions.get("window");
 function Menu_3() {
   const startCount = 1; // 시작 값
   const totalCount = 30; // 전체 버튼 개수
   const days = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
   const buttons = Array(totalCount).fill(startCount);
 
-
   const [selectedButtonIndex, setSelectedButtonIndex] = useState(-1);
-  const [selectedCount, setSelectedCount] = useState(0); 
+  const [selectedCount, setSelectedCount] = useState(0);
   const [modalVisible, setModalVisible] = useState(false);
 
-  const toggleModal = () => {setModalVisible(!modalVisible);};
+  const toggleModal = () => {
+    setModalVisible(!modalVisible);
+  };
 
   const handleButtonPress = (index) => {
     setSelectedButtonIndex(index);
@@ -75,14 +76,14 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     backgroundColor: "gray",
   },
-  emContainer:{
-    marginBottom:450,
-    backgroundColor:"Yellow"
+  emContainer: {
+    marginBottom: 450,
+    backgroundColor: "Yellow",
   },
   toptext: {
     fontSize: 30,
     color: "black",
-    backgroundColor: "#FFFCFC" ,
+    backgroundColor: "#FFFCFC",
   },
   addtext: {
     fontSize: 25,
@@ -95,17 +96,19 @@ const styles = StyleSheet.create({
     backgroundColor: "gray",
     height: 100,
   },
-  button: { // 상단 날짜버튼
+  button: {
+    // 상단 날짜버튼
     width: 50,
     height: 50,
     borderRadius: 50,
-    marginVertical:5,
+    marginVertical: 5,
     marginHorizontal: 8,
     backgroundColor: "#E8E8E8",
     alignItems: "center",
     justifyContent: "center",
   },
-  selectedButton: { // 선택된 상단 버튼
+  selectedButton: {
+    // 선택된 상단 버튼
     backgroundColor: "#37C7C7",
   },
   buttonText: {
@@ -118,29 +121,27 @@ const styles = StyleSheet.create({
     fontSize: 10,
     fontWeight: "bold",
   },
-
   addButtonContainer: {
-    marginTop: height/1.52,
-    marginLeft: width/1.26,
+    marginTop: height / 1.52,
+    marginLeft: width / 1.26,
   },
   addButton: {
     width: 60,
     height: 60,
     borderRadius: 30,
-    backgroundColor: '#37C7C7',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#37C7C7",
+    alignItems: "center",
+    justifyContent: "center",
   },
   addButtonText: {
     fontSize: 40,
-    color: 'white',
+    color: "white",
   },
   mcontainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
-  
 });
 
 export default Menu_3;

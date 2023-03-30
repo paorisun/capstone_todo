@@ -6,6 +6,8 @@ import Menu_3 from "./Menu_3";
 import Menu_4 from "./Menu_4";
 import Menu_5 from "./Menu_5";
 import { Image } from "react-native";
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 const Tab = createBottomTabNavigator();
 
@@ -14,15 +16,75 @@ export default function MenuBar() {
     <Tab.Navigator
       initialRouteName="3"
       screenOptions={{
-        tabBarStyle: { backgroundColor:"black",height:60, flex:0.08 },
+        tabBarStyle: { backgroundColor: "black", height: 60, flex: 0.08 },
         tabBarShowLabel: false,
       }}
     >
-      <Tab.Screen name="1" component={Menu_1} />
-      <Tab.Screen name="2" component={Menu_2} />
-      <Tab.Screen name="3" component={Menu_3} />
-      <Tab.Screen name="4" component={Menu_4} />
-      <Tab.Screen name="5" component={Menu_5} />
+      <Tab.Screen
+        name="1"
+        component={Menu_1}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <FontAwesomeIcon
+              icon={faHome}
+              size={25}
+              style={{ color: focused ? "white" : "grey" }}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="2"
+        component={Menu_2}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <FontAwesomeIcon
+              icon={faHome}
+              size={25}
+              style={{ color: focused ? "white" : "grey" }}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="3"
+        component={Menu_3}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <FontAwesomeIcon
+              icon={faHome}
+              size={25}
+              style={{ color: focused ? "white" : "grey" }}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="4"
+        component={Menu_4}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <FontAwesomeIcon
+              icon={faHome}
+              size={25}
+              style={{ color: focused ? "white" : "grey" }}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="5"
+        component={Menu_5}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <FontAwesomeIcon
+              icon={faHome}
+              size={25}
+              style={{ color: focused ? "white" : "grey" }}
+            />
+          ),
+        }}
+      />
     </Tab.Navigator>
   );
 }

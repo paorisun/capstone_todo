@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { View, Modal, Text, Button, StyleSheet, TextInput } from 'react-native';
+import { View, Modal, Text, Button, StyleSheet, TextInput, Keyboard } from 'react-native';
 
 const CustomModal = ({ modalVisible, toggleModal }) => {
-  //const [inputValue, setInputValue] = useState('');
+
   return (
     <Modal visible={modalVisible} animationType="fade" transparent={true}>
       <View style={styles.modalContainer}>
@@ -11,7 +11,6 @@ const CustomModal = ({ modalVisible, toggleModal }) => {
             <TextInput
             placeholder="할일을 입력하세요"
             style={styles.textinput}
-            //onChangeText={text => setInputValue(text)}
           />
           </View>
           <View style={styles.cotain1}>
@@ -19,12 +18,10 @@ const CustomModal = ({ modalVisible, toggleModal }) => {
             <TextInput 
               placeholder="00"
               style={styles.textinput2}
-              //onChangeText={text => setInputValue(text)}
             />
             <TextInput 
               placeholder="00"
               style={styles.textinput2}
-              //onChangeText={text => setInputValue(text)}
             />
           </View>
           <View style={styles.cotain1}>
@@ -32,7 +29,6 @@ const CustomModal = ({ modalVisible, toggleModal }) => {
             <TextInput 
               placeholder="00"
               style={styles.textinput2}
-              //onChangeText={text => setInputValue(text)}
             />
             <Text style={styles.modaltext}>분전</Text>
           </View>
@@ -41,7 +37,6 @@ const CustomModal = ({ modalVisible, toggleModal }) => {
             <TextInput 
               placeholder="장소를 검색하세요"
               style={styles.textinput2}
-              //onChangeText={text => setInputValue(text)}
             />
           </View>
           <View style={styles.cotain1}>
@@ -49,7 +44,6 @@ const CustomModal = ({ modalVisible, toggleModal }) => {
             <TextInput 
               placeholder="00"
               style={styles.textinput2}
-              //onChangeText={text => setInputValue(text)}
             />
           </View>
           <View style={styles.cotain1}>
@@ -57,7 +51,6 @@ const CustomModal = ({ modalVisible, toggleModal }) => {
             <TextInput 
               placeholder="00"
               style={styles.textinput2}
-              //onChangeText={text => setInputValue(text)}
             />
           </View>
           <View style={styles.cotain1}>
@@ -90,10 +83,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 10,
     padding: 20,
-    marginLeft: 20, // 좌우 여백
-    marginRight: 20,
-    marginTop: 100, // 상하 여백
-    marginBottom: 100,
+    marginLeft: 40, // 좌우 여백
+    marginRight: 40,
+    marginTop: 50, // 상하 여백
+    marginBottom: 50,
     justifyContent: 'center',
     alignItems: 'center',
   },
